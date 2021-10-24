@@ -53,9 +53,7 @@ for (var i = 0; i < MONSTER_TRAITS.length; i++) {
 var MasterSuffix = ' master';
 var MinionSuffix = ' minion';
 
-var MONSTERS_LIST = [
-	
-];
+var MONSTERS_LIST = [];
 
 var EXPANSIONS = [
 	[bg2e, 'Big'],
@@ -97,18 +95,7 @@ var ImagePathMapTile = "";
 
 //name,cols width, row height, width delta, height delta
 MAP_TILES_LIST_COMPLETE = [
-	['Showdown', 8, 6, 32, 32],
-	['Acantus Plant', 1, 1, 32, 32],
-	['Bug Patch', 1, 1, 32, 32],	
-	['Dead Monster', 2, 2, 32, 32],
-	['Debris', 1, 1, 32, 32],
-	['Giant Stone Face', 3, 2, 32, 32],
-	['Nightmare Tree', 3, 3, 32, 32],
-	['Ore Vein', 1, 1, 32, 32],
-	['Stone Column', 2, 1, 32, 32],
-	['Survivor Corpse', 1, 1, 32, 32],
-	['Tall Grass', 2, 2, 32, 32],
-	['Toppled Pillar', 4, 1, 32, 32]
+	['showdown', 8, 6, 32, 32],
 ];
 
 MAP_TILES_LIST = [];
@@ -138,11 +125,12 @@ ANGLES_LIST = [
 ];
 
 
+
+
+
+
 var LIEUTENANTS_LIST = [
-	['White Lion U', 2, 2, 32, 32, true, MoR],
-	['White Lion D', 2, 2, 32, 32, true, MoR],
-	['White Lion L', 2, 2, 32, 32, true, MoR],
-	['White Lion R', 2, 2, 32, 32, true, MoR],
+	['White Lion', 2, 2, 32, 32, true, MoB],
 ];
 
 var LIEUTENANTS = {};
@@ -250,8 +238,7 @@ for (var i = 0; i < MONSTERS_LIST.length; i++) {
 	MONSTERS[MONSTERS_LIST[i][0]] = oneItem;
 }
 
-SEARCH_ITEMS_LIST = [
-];
+SEARCH_ITEMS_LIST = [];
 
 //Items
 var hand = { className: 'hand' };
@@ -261,14 +248,39 @@ var item = { className: 'item' };
 
 ITEMS_LIST = [];
 
-TIER2_ITEMS_LIST = [
-];
+TIER2_ITEMS_LIST = [];
 
 RELICS_LIST = [
+	['Aurium Mail', armor],
+	['Boneborn Bow', twohand],
+	['Book Of Stars', item],
+	['Dawnblade', hand],
+	['Fear Eater', twohand],
+	['Fortunas Dice', item],
+	['Forewarned Ring', item],
+	['Gauntlets Of Power', item],
+	['Immunity Elixir', item],
+	['Living Heart', item],
+	['Mending Talisman', item],
+	['Robes Of The Last', armor],
+	['Shadow Plotter', item],
+	['Shards Of Ithyndrus', hand],
+	['Shield Of The Dark God', hand],
+	['Spirited Scythe', twohand],
+	['Staff Of Light', twohand],
+	['Sun Stone', item],
+	['The Manors Heart', item],
+	['The Shadow Rune', twohand],
+	['The White Crown', item],
+	['Trueshot', twohand],
+	['Undertakers Coat', armor],
+	['Valyndras Bane', twohand],
+	['Wanderers Stone', item],
+	['Workmans Ring', item],
+	['Ynfernal Rune', twohand]
 ];
 
-OVERLORD_RELICS_LIST = [
-];
+OVERLORD_RELICS_LIST = [];
 
 ITEMS = { hand: [], hand2: [], armor: [], item: [] };
 ITEMS2 = { hand: [], hand2: [], armor: [], item: [] };
@@ -287,6 +299,18 @@ for (var i = 0; i < RELICS_LIST.length; i++) {
 }
 
 TAINTED_CARDS_LIST = [
+	'Abomination',
+	'Bad Blood',
+	'Death Rage',
+	'Deaths Hand',
+	'Dream Walk',
+	'Gray Decay',
+	'Great Sorrow',
+	'Martyrdom',
+	'New Orders',
+	'Ordinary',
+	'Perfect Peace',
+	'Vile Shadow'
 ];
 
 //Classes
@@ -386,13 +410,37 @@ wildlander.title = 'Wildlander';
 
 //Skills
 apothecary.skills = [
-	
+	['Brew Elixir', 0],
+	['Smoking Vials', 0, hand],
+	['Concoction', 1],
+	['Herbal Lore', 1],
+	['Inky Substance', 1],
+	['Bottled Courage', 2],
+	['Protective Tonic', 2],
+	['Secret Formula', 2],
+	['Hidden Stash', 3],
+	['Potent Remedies', 3]
 ];
 
 avenger.skills = [
+	['Death From Above', 3],
+	['Holy Champion', 1],
+	['Justicar', 0],
+	['Vengeful Smite', 2]
 ];
 
 bard.skills = [
+	['Aria Of War', 2],
+	['Cacophony', 3],
+	['Concentration', 2],
+	['Dissonance', 1],
+	['Lute', 0, item],
+	['Peaceful Rest', 1],
+	['Rehearsal', 2],
+	['Song Of Mending', 0],
+	['Travelers Blade', 0, hand],
+	['Understudy', 1],
+	['Wayfarer', 3]
 ];
 
 battlemage.skills = [
@@ -875,10 +923,10 @@ var HYBRID_CLASSES = [avenger, lorekeeper, monk, raider, truthseer, watchman, he
 //Heroes
 var MAX_Heroes = 4
 var HEROES_LIST = [
-	['survivor 1', 1, 1, 32, 32, 1, 1, rog],
-	['survivor 2', 1, 1, 32, 32, 1, 1, rog],
-	['survivor 3', 1, 1, 32, 32, 1, 1, rog],
-	['survivor 4', 1, 1, 32, 32, 1, 1, rog],
+	['Survivor 1', 1, 1, 32, 32, 10, 5, rog],
+	['Survivor 2', 1, 1, 32, 32, 12, 3, war],
+	['Survivor 3', 1, 1, 32, 32, 8, 5, sup],
+	['Survivor 4', 1, 1, 32, 32, 10, 4, rog],
 ];
 
 var HEROES = {};
@@ -921,20 +969,7 @@ ALLIES_SKILLS = {};
 ALLIES_SKILLS['Serena'] = ['Aura Of Might', 'Healing Aura', 'Holy Hammer'];
 ALLIES_SKILLS['Raythen'] = ['Back Strike', 'Night Prowler', 'Sharp Eyes'];
 
-FAMILIARS_LIST = [
-	['Brightblaze', 1, 1, 32, 32, true],
-	['Mirror Image', 1, 1, 32, 32, true],
-	['Pico', 1, 1, 32, 32, true],
-	['Raven Flock', 1, 1, 32, 32, true],
-	['Reanimate', 1, 1, 32, 32, true],
-	['Scourge', 1, 1, 32, 32, true],
-	['Shadow Soul', 1, 1, 32, 32, true],
-	['Skye', 1, 1, 32, 32, true],
-	['Summoned Stone', 1, 1, 32, 32, true],
-	['Trap', 1, 1, 32, 32, false],
-	['Wolf', 1, 1, 32, 32, true],
-	['Bandaged Servant', 1, 1, 32, 32, true]
-];
+FAMILIARS_LIST = [];
 
 var FAMILIARS = {};
 
@@ -967,13 +1002,7 @@ for (var i = 0; i < VILLAGERS_LIST.length; i++) {
 	VILLAGERS[VILLAGERS_LIST[i][0]] = oneItem;
 }
 
-DOORS_LIST = [
-	['Yellow Door', 2, 1, 32, 32],
-	['Red Door', 2, 1, 32, 32],
-	['Overgrowth', 2, 1, 32, 32],
-	['Portcullis', 2, 1, 32, 32],
-	['Old Wall', 2, 1, 32, 32]
-];
+DOORS_LIST = [];
 DOORS = {};
 for (var i = 0; i < DOORS_LIST.length; i++) {
 	var oneItem = {};
@@ -1010,17 +1039,11 @@ for (var i = 0; i < BLOCKS_LIST.length; i++) {
 MAPTOKENS = {};
 
 OBJECTIVES_LIST = [
-	['Acantus Plant', 1, 1, 32, 32],
-	['Bug Patch', 1, 1, 32, 32],	
-	['Dead Monster', 1, 1, 32, 32],
-	['Debris', 1, 1, 32, 32],
-	['Giant Stone Face', 1, 1, 32, 32],
-	['Nightmare Tree', 1, 1, 32, 32],
-	['Ore Vein', 1, 1, 32, 32],
-	['Stone Column', 1, 1, 32, 32],
-	['Survivor Corpse', 1, 1, 32, 32],
-	['Tall Grass', 2, 3, 32, 32],
-	['Toppled Pillar', 1, 1, 32, 32]
+	['Green', 1, 1, 32, 32],
+	['Blue', 1, 1, 32, 32],
+	['Red', 1, 1, 32, 32],
+	['White', 1, 1, 32, 32],
+	['Unknown', 1, 1, 32, 32]
 ];
 OBJECTIVES = {};
 for (var i = 0; i < OBJECTIVES_LIST.length; i++) {
