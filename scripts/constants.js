@@ -879,6 +879,10 @@ var HEROES_LIST = [
 	['survivor 2', 1, 1, 32, 32, 1, 1, rog],
 	['survivor 3', 1, 1, 32, 32, 1, 1, rog],
 	['survivor 4', 1, 1, 32, 32, 1, 1, rog],
+	['survivor 5', 1, 1, 32, 32, 1, 1, rog],
+	['survivor 6', 1, 1, 32, 32, 1, 1, rog],
+	['survivor 7', 1, 1, 32, 32, 1, 1, rog],
+	['survivor 8', 1, 1, 32, 32, 1, 1, rog],
 ];
 
 var HEROES = {};
