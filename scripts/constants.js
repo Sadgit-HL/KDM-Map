@@ -97,7 +97,7 @@ var ImagePathMapTile = "";
 
 //name,cols width, row height, width delta, height delta
 MAP_TILES_LIST_COMPLETE = [
-	['Showdown', 8, 6, 32, 32],
+	['Showdown', 8, 6, 50, 32],
 	['Acantus Plant', 1, 1, 32, 32],
 	['Bug Patch', 1, 1, 32, 32],	
 	['Dead Monster', 2, 2, 32, 32],
