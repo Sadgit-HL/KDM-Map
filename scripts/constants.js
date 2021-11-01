@@ -143,6 +143,10 @@ var LIEUTENANTS_LIST = [
 	['White Lion D', 2, 2, 32, 32, true, MoR],
 	['White Lion L', 2, 2, 32, 32, true, MoR],
 	['White Lion R', 2, 2, 32, 32, true, MoR],
+	['Screaming Antelope U', 2, 2, 32, 32, true, MoR],
+	['Screaming Antelope D', 2, 2, 32, 32, true, MoR],
+	['Screaming Antelope L', 2, 2, 32, 32, true, MoR],
+	['Screaming Antelope R', 2, 2, 32, 32, true, MoR],
 ];
 
 var LIEUTENANTS = {};
