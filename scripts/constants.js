@@ -155,6 +155,10 @@ var LIEUTENANTS_LIST = [
 	['White Lion D', 2, 2, 32, 32, true, MoR],
 	['White Lion L', 2, 2, 32, 32, true, MoR],
 	['White Lion R', 2, 2, 32, 32, true, MoR],
+	['The Hand U', 2, 2, 32, 32, true, MoR],
+	['The Hand D', 2, 2, 32, 32, true, MoR],
+	['The Hand L', 2, 2, 32, 32, true, MoR],
+	['The Hand R', 2, 2, 32, 32, true, MoR],
 ];
 
 var LIEUTENANTS = {};
